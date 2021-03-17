@@ -17,5 +17,6 @@ The output of the function will be a vector where each number represents the pop
 Here is an example of the plot:
 
 [![4be67378-cb88-44b8-afb7-8d91f16dbc01.png](https://i.postimg.cc/66c3mxZg/4be67378-cb88-44b8-afb7-8d91f16dbc01.png)](https://postimg.cc/fk3DVFBf)
+
 Finally this code finishes with converting the data into a csv in which the first column is generations in years and the second is the abudnace vector.
 
