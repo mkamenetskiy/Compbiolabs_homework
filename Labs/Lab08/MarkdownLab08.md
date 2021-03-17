@@ -4,10 +4,10 @@
 
 This piece of code will be useful for calculating a population that changes over time, specifically one that changes following a logistic gowth model.
 In order to set the parameters of the function to be used one must set the existing conditions of the function:
-* **population**- This will be the value of the starting population
-* **K**- This will be the carrying capacity of the population. This is not neccessary to preassign.
-* **r**- This is the intrinsic growth rate of a population.
-* **years**- This is the amount of years in which the population will grow for.
+* **population** - This will be the value of the starting population
+* **K** - This will be the carrying capacity of the population. This is not neccessary to preassign.
+* **r** - This is the intrinsic growth rate of a population.
+* **years** - This is the amount of years in which the population will grow for.
 
 The function used will be as below:
 > LogGrowthFunc <- function(r, K){...}
@@ -16,3 +16,4 @@ The output of the function will be a vector where each number represents the pop
 Here is an example of the plot:
 ![ExamplePlot](~/Desktop/EBIO4420/Compbiolabs_homework/Labs/Lab08/ExamplePlotLab08)
 Finally this code finishes with converting the data into a csv in which the first column is generations in years and the second is the abudnace vector.
+
