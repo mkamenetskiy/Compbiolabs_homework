@@ -11,9 +11,10 @@ In order to set the parameters of the function to be used one must set the exist
 
 The function used will be as below:
 > LogGrowthFunc <- function(r, K){...}
+
 The first input of the function can be the r preassigned or a number of choosing that is the intrinsic growth rate. The second input of function can be the K preassigned or a number that represents the carrying capacity.
 The output of the function will be a vector where each number represents the population in sequential years and a plot of the time in years against the abundance of the population.
 Here is an example of the plot:
-![ExamplePlot](~/Desktop/EBIO4420/Compbiolabs_homework/Labs/Lab08/ExamplePlotLab08)
+[![4be67378-cb88-44b8-afb7-8d91f16dbc01.png](https://i.postimg.cc/66c3mxZg/4be67378-cb88-44b8-afb7-8d91f16dbc01.png)](https://postimg.cc/fk3DVFBf)
 Finally this code finishes with converting the data into a csv in which the first column is generations in years and the second is the abudnace vector.
 
