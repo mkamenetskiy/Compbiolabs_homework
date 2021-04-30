@@ -23,11 +23,11 @@ which(CheckBadRow)
 #The hint suggests the summarise() function from dplyr: summarize(.data, ..., groups= NULL)
 #But first I think we should do a group_by function. group_by(.data, ..., add=FALSE) (false if you want thr group to replace )
 
-GlobalWoodData <- group_by(GlobalWoodData[3]) #This did not group nor did it do anything it was supposed to 
+GlobalWoodData <- group_by(GlobalWoodData, ) #This did not group nor did it do anything it was supposed to 
    summarize(avg_WoodDensity = mean(GlobalWoodData[4])) # I tried to pipe this afterward and was left with an odd message
                                                                   
-GlobalWoodData %>% group_by(GlobalWoodData[3]) %>% summarise(avg_woodDensity = mean(GlobalWoodData[4]))
+GlobalWoodData %>% group_by(GlobalWoodData[3]) %>% summarise(avg_woodDensity = mean(GlobalWoodData[4]), n=n())
 #The above is the syntax used in the following youtube:https://www.youtube.com/watch?v=R0Ec6NiSgGM, it printed out a result but all the avg wood density is now NA.
 
 #Alright, it's been a sad hour of reading through lots of jargon and watching youtube videos. I'm throwing in the towel! 
-
+NewDF <- GlobalWoodData %>% group_by(GlobalWoodData, Binomial, Family) %>% summarise(avg_woodDensity = mean(Wood Density), n=n())

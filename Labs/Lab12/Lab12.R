@@ -41,8 +41,10 @@ datesTimesParsed <- parse_date_time (x= stateStatsData$Date,
                                orders = c("mdY"))
 
 library(dplyr)
+library(ggplot2)
 
 #MAKE A HUGE PIPE OUT OF IT
+#Here we had a hiccup with using the pipleline instead of using > we used just a simple / 
 
 ColoradoDataBeforeMay <- stateStatsData %>%
   filter( Name == "Colorado") %>%
@@ -51,6 +53,42 @@ ColoradoDataBeforeMay <- stateStatsData %>%
   arrange(Date) %>%
   filter(Date < dt)
 
+#Pipe copy and pasted from Sam's email, since the above wasnt working. Looks like I had altered the state stat data and that is why the pipeline would not work
+ColoradoDataSam <- stateStatsData %>%
+  filter( Name == "Colorado") %>%
+  select(Date, Cases, Deaths) %>%
+  mutate( Date = strptime( Date, format = "%m/%d/%Y", tz = "") ) %>%
+  arrange( Date ) %>%
+  filter( Date < as.POSIXlt("2020-05-15") ) # dt defined above
+
+#Can also change it so it looks a little more friendly than before. 
+ColoradoDataSamDate <- stateStatsData %>%
+  filter( Name == "Colorado") %>%
+  select(Date, Cases, Deaths) %>%
+  mutate( Date = mdy(Date))  %>%
+  arrange( Date ) %>%
+  filter( Date < as.Date("2020-05-15") )
+
 str(stateStatsData)
 names(stateStatsData)    
+
+
+
+#LAB12 
+#Notes from Sam during lecture: p <- ggplot() + ... p <- p + geom_ ... This could help make successive plots
+#Part 2 after making the pipeline, includes making a ggplot out of the data. 
+ggplot(data = ColoradoDataBeforeMay) #Before I even do this, I see that ColoradoDataBeforeMay has no objects in it...
+#We fixed it by changing the original data 
+ 
+#Now we begin with ggplot, and I already forgot how to do everything...
+#The first plot is a cases vs date plot 
+TestPlot <- ggplot(data = ColoradoDataSamDate, 
+       mapping = aes(x= Date, y = Cases)) +
+         geom_point()
+#It claims that Cases was not found?? Hmm. This is tough. 
+
+
+TestPlot
+
+
   
