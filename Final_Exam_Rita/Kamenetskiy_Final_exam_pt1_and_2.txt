@@ -36,5 +36,5 @@ grep -c "Hirundo" Birds.txt
 #git push 
 
 #Question 9
-#Well, if you have not pushed the file to git hub yet, you can do git status and it would tell you the difference between the two files. 
+#Well, if you have not pushed the file to git hub yet, you can do git status and it would tell you the difference between the two files. I have now changed it. 
 
