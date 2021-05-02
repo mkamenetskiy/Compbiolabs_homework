@@ -1,4 +1,6 @@
 #Parts 1 and 3 of final exam, Kamenetskiy
+#To make this file I used the "touch" command
+
 #Question 1
 nano stuff.txt
 #or 
@@ -27,14 +29,20 @@ grep -c "Hirundo" Birds.txt
 #Git is a software that can act as a command line tool! When initialized, git creates a "repository" in which it creates a directory with the name .git that is usually hidden from the user's view. The repository stores your revisions once you add, commit and push to it! 
 
 #Question 7
-#
+#Git is a software for storing your revisions in a hidden from view repository, however, git hub is an online platform in which you can push your git repository to so that it is accessible online. Since it is accessible online, that means that other people can also see your work, or you can collaborate with others on one single repository. 
 
 #Question 8
 #The series of commands for those with git and github will use the following lines in order to add a version of a file to github. 
 #git add Something.txt
 #git commit -m "Message Here"
-#git push 
+#git push -u origin master #-u allows you to git pull as well so that you now have updates!
+
 
 #Question 9
-#Well, if you have not pushed the file to git hub yet, you can do git status and it would tell you the difference between the two files. I have now changed it. 
+#To know the differences between the most recent commit and that of a file two commits ago you would do the below: 
+git diff HEAD~2 bar.txt
+#You can always use the commit_hash of the file retrieved through the git log command. 
+
+
+
 
